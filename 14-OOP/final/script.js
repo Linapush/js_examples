@@ -51,7 +51,7 @@ console.log(Person.prototype.isPrototypeOf(jonas));
 console.log(Person.prototype.isPrototypeOf(matilda));
 console.log(Person.prototype.isPrototypeOf(Person));
 
-// .prototyeOfLinkedObjects
+// .prototypeOfLinkedObjects
 
 Person.prototype.species = 'Homo Sapiens';
 console.log(jonas.species, matilda.species);
@@ -174,7 +174,7 @@ console.log(jessica);
 jessica.calcAge();
 console.log(jessica.age);
 
-console.log(jessica.__proto__ === PersonCl.prototype);
+console.log(jessica.__proto__ === PersonCl.prototype); // проверка того, что свойство __proto__ объекта jessica ссылается на прототип PersonCl.prototype. Это свойство (__proto__) позволяет объекту иметь доступ к методам и свойствам, определенным в прототипе функции-конструктора.
 
 // PersonCl.prototype.greet = function () {
 //   console.log(`Hey ${this.firstName}`);

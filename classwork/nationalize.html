@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Nationalize.io API Test</h1>
+    <button id="singleRequest">Get Single Name</button>
+    <button id="multipleRequest">Get Multiple Names</button>
+    <pre id="result"></pre>
+
+    <script>
+        document.getElementById("singleRequest").addEventListener("click", function () {
+            fetch('https://api.nationalize.io/?name=michael')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+
+        document.getElementById("multipleRequest").addEventListener("click", function () {
+            fetch('https://api.nationalize.io/?name[]=michael&name[]=matthew&name[]=jane')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

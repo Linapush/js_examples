@@ -1,0 +1,9 @@
+Работа с массивами
+push
+pop
+
+const massive = [9, 0, 1, 5]
+massive.push()
+massive.pop()
+
+node index.js
